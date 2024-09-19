@@ -14,8 +14,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Pull the code from your GitHub repository
-                git branch: 'main', url: 'https://github.com/your-username/my-app.git'
+                // Pull the code from your GitHub repository using credentials
+                git branch: 'main',
+                    url: 'https://github.com/your-username/my-app.git',
+                    credentialsId: 'b901875b-2c86-4658-af99-c4e2772c94bc' // Replace with your GitHub credentials ID
             }
         }
 
